@@ -1,0 +1,39 @@
+/* main */
+.main-panels {
+  backGround-image: url(library_system\public\css\images\4691619_m.jpg);
+}
+
+.modal-header .close {
+  margin-top: -30px;
+}
+
+a.disabled{
+  pointer-events: none;
+}
+
+.sidebar .nav li:hover.disabled a {
+  opacity: 0.7;
+}
+
+.user {
+  margin-left: 30px;
+}
+
+
+
+/* sidebar */
+.login-user-name {
+  color:blue;
+}
+
+
+/*history*/
+h4 .title {
+  color: darkslategrey;
+  font-family: Arial;
+}
+
+/*borrowNow*/
+div #warning .warning {
+  color:indianred;
+}
