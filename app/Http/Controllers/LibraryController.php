@@ -125,6 +125,8 @@ class LibraryController extends Controller
 
   public function logOut()
   {
-    return Auth::logout();
+    Auth::logout();
+
+    return redirect('/login');
   }
 }

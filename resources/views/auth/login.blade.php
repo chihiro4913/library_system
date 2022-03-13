@@ -33,6 +33,12 @@
                     <p>Logout</p>
                 </a>
             </li>
+            <li class="link">
+              <a href="/register">
+                <i class="ti-back-right"></i>
+                <p>新規登録</p>
+              </a>
+            </li>
         </ul>
     </div>
 </div>
