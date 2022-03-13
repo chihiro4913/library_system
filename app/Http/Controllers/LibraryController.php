@@ -17,13 +17,28 @@ class LibraryController extends Controller
 
   public function index()
   {
-    $libraries = Library::all();
+    // $libraries = Library::all();
     $user = Auth::user();
+
+    $libraries = Library::orderBy('id', 'asc')->where(function ($query) {
+
+      // 検索機能
+      if ($search = request('search')) {
+          $query->where(
+            'name', 'LIKE', "%{$search}%"
+          )
+          ->orWhere(
+            'writer','LIKE',"%{$search}%"
+          );
+      }
+    // 8投稿毎にページ移動
+    })->paginate(6);
+
 
     return view("/index", [
       "libraries" => $libraries,
       "user" => $user
-  ]);
+    ]);
   }
 
   public function borrowingForm(Request $request)

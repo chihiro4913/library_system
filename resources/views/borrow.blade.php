@@ -27,17 +27,13 @@
                                 <p class="borrow-book-writer">作者: {{ $library->writer }}</p>
                             </div>
                             <hr>
-                            <!-- <div class="form-group">
-                                <label for="exampleInputEmail1">return date</label>
-                                <input type="date" class="form-control border-input" name="return-due-date" placeholder="date">
-                            </div> -->
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success btn-fill btn-wd">借りる</button>
                                 <input type="hidden" name="id" value="{{ $library->id }}">
                             </div>
                             <div class="clearfix"></div>
                         </form>
-                        <a href="http://localhost/library/index">一覧へ戻る</a>
+                        <a href="http://localhost/library/index">図書リストへ戻る</a>
                     </div>
                 </div>
             </div>
